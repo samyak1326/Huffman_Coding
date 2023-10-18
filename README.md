@@ -2,6 +2,7 @@
  
 We will be implementing a Huffman code.
 
+Things to do in the code: 
 1. Go to http://www.gutenberg.org and find a book in English. Download the book as a plain text (.txt)
 file using a Plain Text UTF-8 link.
 
@@ -17,3 +18,5 @@ file using a Plain Text UTF-8 link.
 
 5. Compare the savings of your code with a fixed-length encoding using 7 bits per character. How many
 bits did you save?
+
+Implementation: 
