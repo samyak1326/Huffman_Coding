@@ -19,4 +19,4 @@ file using a Plain Text UTF-8 link.
 5. Compare the savings of your code with a fixed-length encoding using 7 bits per character. How many
 bits did you save?
 
-Implementation: 
+Link of the Book I used for the project: https://www.gutenberg.org/ebooks/23591
