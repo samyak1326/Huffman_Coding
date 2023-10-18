@@ -29,7 +29,7 @@ print(frequency)
 
 #filtering the non-repeating characters using ASCII values
 ascii_characters = [ord(i) for i in content if len(i) >0]
-ascii_characters_finals = [chr(i) for i in ascii_characters if i >= 32 and i <= 126]
+ascii_characters_finals = [chr(i) for i in ascii_characters if i >= 32 and i <= 128]
 print("ASCII CHARACTERS")
 print(set(ascii_characters_finals))
 
