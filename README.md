@@ -10,8 +10,11 @@ Link of the Book I used for the project: **https://www.gutenberg.org/ebooks/2359
 # **Functions**
 
 **read_text_file(filename, mode, enc)**: Reads a text file and returns its content as a list of strings.
+
 **frequency_calculator(content):** Calculates the frequency of each character in the given content.
+
 **huffman_tree(content):** Constructs a Huffman tree based on the frequencies of characters.
+
 **huffman_codes(node, code, codes):** Generates Huffman codes for each character.
 
 # **Output**
@@ -19,11 +22,19 @@ Link of the Book I used for the project: **https://www.gutenberg.org/ebooks/2359
 The output includes:
 
 Frequencies of all characters in the file
+
 ASCII characters after filtering
+
 Final frequencies after filtering
+
 Huffman codes for each character
+
 Total number of bits required for Huffman encoding
+
 Average code length for Huffman encoding
+
 Total number of bits required for fixed-length encoding
+
 Average code length for fixed-length encoding
+
 Savings in bits achieved through Huffman coding
