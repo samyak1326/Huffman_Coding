@@ -1,22 +1,29 @@
 # Huffman_Coding
- 
-We will be implementing a Huffman code.
 
-Things to do in the code: 
-1. Go to http://www.gutenberg.org and find a book in English. Download the book as a plain text (.txt)
-file using a Plain Text UTF-8 link.
 
-2. Calculate the frequency of each letter/symbol in the text.
+# **Description**
 
-3. Create the Huffman tree based on 128 ASCII characters (https://ascii.cl/). You can ignore the first 32 characters (with codes 0-31), so the total number of characters would be 96.
+This repository contains Python code for implementing Huffman coding. The script reads a text file and generates the Huffman codes for each character based on their frequencies in the file. The codes are then printed out along with their corresponding frequencies. The script also calculates and displays additional statistics, such as the total number of bits required for encoding, the average code length, and the savings achieved through Huffman coding compared to fixed-length encoding.
 
-4. Print a table with your code, e.g:
-    •a: 0010
-    •b: 0011
-    •c: 11111
-    •. . .
+Link of the Book I used for the project: **https://www.gutenberg.org/ebooks/23591**
 
-5. Compare the savings of your code with a fixed-length encoding using 7 bits per character. How many
-bits did you save?
+# **Functions**
 
-Link of the Book I used for the project: https://www.gutenberg.org/ebooks/23591
+**read_text_file(filename, mode, enc)**: Reads a text file and returns its content as a list of strings.
+**frequency_calculator(content):** Calculates the frequency of each character in the given content.
+**huffman_tree(content):** Constructs a Huffman tree based on the frequencies of characters.
+**huffman_codes(node, code, codes):** Generates Huffman codes for each character.
+
+# **Output**
+
+The output includes:
+
+Frequencies of all characters in the file
+ASCII characters after filtering
+Final frequencies after filtering
+Huffman codes for each character
+Total number of bits required for Huffman encoding
+Average code length for Huffman encoding
+Total number of bits required for fixed-length encoding
+Average code length for fixed-length encoding
+Savings in bits achieved through Huffman coding

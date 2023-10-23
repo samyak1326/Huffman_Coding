@@ -91,6 +91,7 @@ huffman_codes(root, "", codes)
 
 
 #printing table with Huffman Codes
+print("_________________________________________________________")
 print("Characters\tFrequencies\tHuffman Codes")
 print("----------\t-----------\t-------------")
 for key, val in frequency_dict.items():
