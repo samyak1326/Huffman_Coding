@@ -5,7 +5,10 @@
 
 This repository contains Python code for implementing Huffman coding. The script reads a text file and generates the Huffman codes for each character based on their frequencies in the file. The codes are then printed out along with their corresponding frequencies. The script also calculates and displays additional statistics, such as the total number of bits required for encoding, the average code length, and the savings achieved through Huffman coding compared to fixed-length encoding.
 
-Link of the Book I used for the project: **https://www.gutenberg.org/ebooks/23591**
+Link of the Book I used for the project: 
+**https://www.gutenberg.org/ebooks/23591**
+
+**https://www.gutenberg.org/ebooks/1513**
 
 # **Functions**
 
