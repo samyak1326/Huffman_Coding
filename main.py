@@ -1,8 +1,8 @@
 #SAMYAK JAIN 
 #G01448453
 #CS-584
-#Book_Link : https://www.gutenberg.org/ebooks/23591
-
+#Book_Link : https://www.gutenberg.org/ebooks/23591 (Primary Book)
+#Book_Link : https://www.gutenberg.org/ebooks/1513
 
 #read text file and filtering the escape filters
 def read_text_file(filename, mode, enc):
@@ -21,6 +21,7 @@ def frequency_calculator(content):
     return frequency
 
 content = read_text_file("gutenberg_temp_ebook.txt", "r", "utf-8")
+# content = read_text_file("gutenberg_RomioJuliet.txt", "r", "utf-8")
 
 frequency = frequency_calculator(content)
 print("FREQUENCY")
