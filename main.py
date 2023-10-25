@@ -2,7 +2,7 @@
 #G01448453
 #CS-584
 #Book_Link : https://www.gutenberg.org/ebooks/23591 (Primary Book)
-    #Book_Link : https://www.gutenberg.org/ebooks/1513
+#Book_Link : https://www.gutenberg.org/ebooks/1513
 
 #read text file and filtering the escape filters
 def read_text_file(filename, mode, enc):
@@ -24,19 +24,22 @@ content = read_text_file("gutenberg_temp_ebook.txt", "r", "utf-8")
 # content = read_text_file("gutenberg_RomioJuliet.txt", "r", "utf-8")
 
 frequency = frequency_calculator(content)
-print("FREQUENCY")
+print("_________________________________________________________")
+print("FREQUENCY: ")
 print(frequency)
 
 
 #filtering the non-repeating characters using ASCII values
 ascii_characters = [ord(i) for i in content if len(i) >0]
 ascii_characters_finals = [chr(i) for i in ascii_characters if i >= 32 and i <= 128]
+print("_________________________________________________________")
 print("ASCII CHARACTERS")
 print(set(ascii_characters_finals))
 
 
 #final frequency of each character
 final_frequency = {key: val for key, val in frequency.items() if key in ascii_characters_finals}
+print("_________________________________________________________")
 print("FINAL FREQUENCY")
 print(final_frequency)
 
@@ -101,11 +104,13 @@ for key, val in frequency_dict.items():
     print(f"{key}\t\t{val}\t\t{codes[key]}")
     
 #calculating total no of bots by multiplying frequency of each character with its huffman code length
+print("*******************************************************")
 total_bits = sum([frequency_dict[i] * len(codes[i]) for i in frequency_dict.keys()])
-print("TOTAL BITS: ", total_bits)
+print("HUFFMAN TOTAL BITS: ", total_bits)
 #calculating average code length
 average_code_length = total_bits / sum(frequency_dict.values())
-print(f"AVERAGE CODE LENGTH: {average_code_length:.3f} bits per character")
+print(f"AVERAGE CODE LENGTH OF HUFFMAN CODING: {average_code_length:.3f} bits per character")
+print("*******************************************************")
 
 #calculating tota; no of bits achieved by doing fixed length encoding
 fixed_length_encoding = (sum([7 * f for c,f in frequency_dict.items()]))
@@ -113,11 +118,12 @@ print("FIXED LENGTH ENCODING: ", fixed_length_encoding)
 
 #calculating average code length of fixed length encoding
 average_code_length_fixed = fixed_length_encoding / sum(frequency_dict.values())
-print(f"AVERAGE CODE LENGTH OF FIXED LENGTH ENCODING, {average_code_length_fixed:.3f} bits per character")
+print(f"AVERAGE CODE LENGTH OF FIXED LENGTH ENCODING: {average_code_length_fixed:.3f} bits per character")
 
 #calculating sving in bits acheived by huffman coding
 saving_in_bits = fixed_length_encoding - total_bits
 saving_percentage = (saving_in_bits / fixed_length_encoding) * 100
 
+print("*******************************************************")
 print("SAVING IN BITS: ", saving_in_bits)
 print(f"SAVING PERCENTAGE: {saving_percentage:.3f}%")
